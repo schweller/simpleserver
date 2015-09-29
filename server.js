@@ -14,6 +14,10 @@ var _react = require('react');
 
 var _react2 = _interopRequireDefault(_react);
 
+var _configConfigApi = require('../config/config-api');
+
+var _configConfigApi2 = _interopRequireDefault(_configConfigApi);
+
 var _appTlp_headerComponentsHeader = require('./app/tlp_header/components/Header');
 
 var _appTlp_headerComponentsHeader2 = _interopRequireDefault(_appTlp_headerComponentsHeader);
@@ -21,7 +25,7 @@ var _appTlp_headerComponentsHeader2 = _interopRequireDefault(_appTlp_headerCompo
 var app = (0, _express2['default'])();
 
 app.get('/', function (req, res) {
-  (0, _request2['default'])('http://52.20.245.204:8080/api/teams/?team=San%20Francisco%2049ers', function (error, response, body) {
+  (0, _request2['default'])(_configConfigApi2['default'].HOSTNAME + ':' + _configConfigApi2['default'].PORT + '/api/teams/?team=San%20Francisco%2049ers', function (error, response, body) {
     if (!error && response.statusCode == 200) {
 
       var TLPHeaderContainer = _react2['default'].createFactory(_appTlp_headerComponentsHeader2['default']);

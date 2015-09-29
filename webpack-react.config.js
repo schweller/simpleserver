@@ -16,6 +16,6 @@ module.exports = (function (options) {
         { test: /\.jsx$/, loader: 'babel-loader' }
       ]
     },
-    resolveLoader: { root: path.join(__dirname, "node_modules") }
+    resolveLoader: { root: path.join(__dirname, 'node_modules') }
   }
 })()
