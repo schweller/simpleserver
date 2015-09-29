@@ -1,5 +1,5 @@
 module.exports = (function (options) {
-  var entry = './app/stylesheet/tlpHeader.js'
+  var entry = '../tlp_header/components/css/tlpHeader.css'
 
   var output = {
     path: './public/scripts',
